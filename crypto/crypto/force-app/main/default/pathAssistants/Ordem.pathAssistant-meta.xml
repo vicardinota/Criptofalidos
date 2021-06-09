@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathAssistant xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <entityName>Ordem__c</entityName>
+    <fieldName>Status__c</fieldName>
+    <masterLabel>Ordem</masterLabel>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;Sua compra será executada quando a cotação chegar no preço desejado&lt;/p&gt;</info>
+        <picklistValueName>Aguardando</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>DataExecucao__c</fieldNames>
+        <picklistValueName>Executada</picklistValueName>
+    </pathAssistantSteps>
+    <recordTypeName>Compra</recordTypeName>
+</PathAssistant>

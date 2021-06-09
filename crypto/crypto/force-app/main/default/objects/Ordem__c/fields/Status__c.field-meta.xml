@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Status__c</fullName>
+    <description>Status da execução da Ordem.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Status da execução da Ordem.</inlineHelpText>
+    <label>Status</label>
+    <required>true</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Tipo__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Aguardando</fullName>
+                <default>true</default>
+                <label>Aguardando</label>
+            </value>
+            <value>
+                <fullName>Executada</fullName>
+                <default>false</default>
+                <label>Executada</label>
+            </value>
+            <value>
+                <fullName>Cancelada</fullName>
+                <default>false</default>
+                <label>Cancelada</label>
+            </value>
+            <value>
+                <fullName>Venda com lucro</fullName>
+                <default>false</default>
+                <label>Venda com lucro</label>
+            </value>
+            <value>
+                <fullName>Venda com prejuízo</fullName>
+                <default>false</default>
+                <label>Venda com prejuízo</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Compra</controllingFieldValue>
+            <controllingFieldValue>Venda</controllingFieldValue>
+            <valueName>Aguardando</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Compra</controllingFieldValue>
+            <valueName>Executada</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Compra</controllingFieldValue>
+            <valueName>Cancelada</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Venda</controllingFieldValue>
+            <valueName>Venda com lucro</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Venda</controllingFieldValue>
+            <valueName>Venda com prejuízo</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

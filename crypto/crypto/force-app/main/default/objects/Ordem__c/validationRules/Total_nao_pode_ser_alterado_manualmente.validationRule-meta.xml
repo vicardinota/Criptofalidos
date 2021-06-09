@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Total_nao_pode_ser_alterado_manualmente</fullName>
+    <active>false</active>
+    <description>Esta regra evita que o usuário altere o total depois que ele já foi preenchido inicialmente</description>
+    <errorConditionFormula>NOT(ISNEW()) &amp;&amp;  ISCHANGED( Total__c ) &amp;&amp; NOT(ISCHANGED( Quantidade__c))  &amp;&amp;  NOT(ISCHANGED( Preco__c ))</errorConditionFormula>
+    <errorDisplayField>Total__c</errorDisplayField>
+    <errorMessage>O total não pode ser editado após a criação do registro.</errorMessage>
+</ValidationRule>

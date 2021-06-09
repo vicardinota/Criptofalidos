@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Vendas</fullName>
+    <columns>NAME</columns>
+    <columns>Mercado__c</columns>
+    <columns>Status__c</columns>
+    <columns>Preco__c</columns>
+    <columns>Quantidade__c</columns>
+    <columns>Total__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Tipo__c</field>
+        <operation>equals</operation>
+        <value>Venda</value>
+    </filters>
+    <label>Vendas</label>
+</ListView>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>Compartilha_Alta</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Compartilha Alta</label>
+        <sharedTo>
+            <group>Investimentos_de_alto_risco</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>NivelRisco__c</field>
+            <operation>equals</operation>
+            <value>Alto</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Compartilha_Baixa</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Compartilha Baixa</label>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+        <criteriaItems>
+            <field>NivelRisco__c</field>
+            <operation>equals</operation>
+            <value>Baixo</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Compartilha_M_dio</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Compartilha Médio</label>
+        <sharedTo>
+            <group>Investimento_de_risco_m_dio</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>NivelRisco__c</field>
+            <operation>equals</operation>
+            <value>Médio</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+</SharingRules>

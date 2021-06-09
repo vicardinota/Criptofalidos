@@ -1,0 +1,3 @@
+<apex:page standardController="Ordem__c">
+        <flow:interview name="Cria_o_de_Ordem" finishLocation="{!URLFOR('/lightning/o/Ordem__c/list?filterName=Recent')}" />
+    </apex:page>
