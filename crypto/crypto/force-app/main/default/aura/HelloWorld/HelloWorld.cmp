@@ -1,0 +1,13 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global">  
+    <aura:attribute name="nome" type="String" default="World"/>
+
+    <lightning:card title="Primeiro componente">
+        <p class="slds-p-horizontal_small">
+            <lightning:input name="userName" label="Digite seu nome" value="{!v.nome}"/>
+            <br />
+            <lightning:button variant="brand" label="Ok" title="Botão ok" onclick="{!c.handleClick}" />
+            <br /><br /><br /><br />
+            Hello {!v.nome}!
+        </p> 
+    </lightning:card>
+</aura:component>
