@@ -22,6 +22,21 @@
         component.find("ordField").forEach(function(f){
             f.reset();
         });
+
+        /*var navEvt = $A.get("e.force:navigateToSObject"); //Atualiza o registro atual
+        navEvt.setParams({
+          //"recordId": component.get("v.recordId"),
+          "recordId": event.getParams().response.id,
+          "slideDevName": "Detail"
+        });
+        navEvt.fire();*/ //navega pro registro criado
+
+        var orderEvt = $A.get("e.c:OrderEvent");
+        orderEvt.setParams({
+            "Context" : "TradeCmp"
+        });
+        orderEvt.fire();
+
     },
 
     handleOrder : function(component, event, helper) {

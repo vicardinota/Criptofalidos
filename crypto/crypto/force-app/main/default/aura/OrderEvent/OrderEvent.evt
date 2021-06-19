@@ -1,0 +1,3 @@
+<aura:event type="APPLICATION">
+    <aura:attribute name="Context" type="String" />
+</aura:event>

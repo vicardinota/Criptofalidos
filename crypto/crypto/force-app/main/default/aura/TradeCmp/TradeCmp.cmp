@@ -7,6 +7,7 @@
     <aura:attribute name="total" type="double"/>
 
     <aura:handler name="init" value="{!this}" action="{!c.retrievePrice}" />
+    <aura:registerEvent name="OrdEvent" type="c:OrderEvent" />
 
     <lightning:card title="{!'Negociar - Preço atual: ' + v.currentPrice}" iconName="standard:partner_fund_allocation">
         <div class="slds-box slds-box_small">
