@@ -2,12 +2,16 @@
 <FlexiPage xmlns="http://soap.sforce.com/2006/04/metadata">
     <description>The default utility bar for the Service Console application.</description>
     <flexiPageRegions>
-        <componentInstances>
-            <componentName>console:history</componentName>
-        </componentInstances>
-        <componentInstances>
-            <componentName>notes:utilityBarNoteList</componentName>
-        </componentInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentName>console:history</componentName>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentName>notes:utilityBarNoteList</componentName>
+            </componentInstance>
+        </itemInstances>
         <name>utilityItems</name>
         <type>Region</type>
     </flexiPageRegions>

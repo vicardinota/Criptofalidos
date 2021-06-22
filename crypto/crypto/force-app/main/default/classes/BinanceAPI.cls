@@ -22,8 +22,24 @@ public class BinanceAPI {
         }
     }
 
-    private Class SymbolPrice{
-        String symbol;
-        String price;
+    @AuraEnabled
+    @future (callout=true)
+    public static List<SymbolPrice> getPrice(){
+        Http http = new Http();
+        HttpRequest request = new HttpRequest();
+        request.setEndpoint('https://api.binance.com/api/v3/ticker/price');
+        request.setMethod('GET');
+        HttpResponse response = http.send(request);
+        if (response.getStatusCode() == 200) {
+            List<SymbolPrice> spList = (List<SymbolPrice>)JSON.deserialize(response.getBody(), List<SymbolPrice>.class);
+            return spList;
+        }else{
+           return null;
+        }
+    }
+
+    public Class SymbolPrice{
+        public String symbol;
+        public String price;
     }
 }
