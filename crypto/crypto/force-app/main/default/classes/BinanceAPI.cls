@@ -23,7 +23,6 @@ public class BinanceAPI {
     }
 
     @AuraEnabled
-    @future (callout=true)
     public static List<SymbolPrice> getPrice(){
         Http http = new Http();
         HttpRequest request = new HttpRequest();
