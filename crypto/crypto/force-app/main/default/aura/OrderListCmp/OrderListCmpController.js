@@ -1,6 +1,5 @@
 ({
     handleInit : function(component, event, helper) {
-        console.log("aqui");
         component.set('v.columns', [
             {label: 'Ordem', fieldName: 'Link__c', type: 'url',typeAttributes: {label: { fieldName: 'Name' }, target: '_blank'}},
             {label: 'Tipo', fieldName: 'Tipo__c', type: 'text'},

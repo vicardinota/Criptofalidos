@@ -1,0 +1,49 @@
+<apex:page StandardController="Mercado__c" extensions="VFOrderController" showHeader="false" sidebar="false" readonly="true" renderAs="pdf">
+    <apex:pageBlock title="Relatório de mercado - {!mercado__c.Name} - {!currentValue} - {!currentDate}">
+        <table style="border: 1px solid black">
+            <tr>
+                <th style="border: 1px solid black">Ordem</th>
+                <th style="border: 1px solid black">Tipo</th>
+                <th style="border: 1px solid black">Quantidade</th>
+                <th style="border: 1px solid black">Preço</th>
+                <th style="border: 1px solid black">Total</th>
+                <th style="border: 1px solid black">Op. Mercado</th>
+                <th style="border: 1px solid black">Validade</th>
+                <th style="border: 1px solid black">Status</th>
+            </tr>
+            <apex:repeat value="{!ordemList}" var="ordem">
+                <tr>    
+                    <td style="border: 1px solid black">{!ordem.Name}</td>
+                    <td style="border: 1px solid black">{!ordem.Tipo__c}</td>
+                    <td style="border: 1px solid black">{!ordem.Quantidade__c}</td>
+                    <td style="border: 1px solid black">{!ordem.Preco__c}</td>
+                    <td style="border: 1px solid black">{!ordem.Total__c}</td>
+                    <td style="border: 1px solid black">{!ordem.OperacaoMercado__c}</td>
+                    <td style="border: 1px solid black"><apex:outputText value="{0,date,dd'/'MM'/'yyyy}"><apex:param value="{!ordem.Validade__c}" /> </apex:outputText></td>
+                    <td style="border: 1px solid black">{!ordem.Status__c}</td>
+                </tr>
+            </apex:repeat>
+        </table>
+    </apex:pageBlock>
+    <div style="page-break-after: always;">&nbsp; </div>
+    <h1>Outros mercados:</h1><br />
+    <apex:variable value="{!1}" var="num" />
+    <table class="tabela">
+        <tr style="border: 1px solid black; width:500px"><th style="border: 1px solid black">Símbolo</th><th style="border: 1px solid black">Preço</th></tr>
+        <apex:repeat value="{!priceList}" var="price">
+            <tr style="border: 1px solid black">
+                <td style="border: 1px solid black; width:200px">{!price.symbol}</td><td style="border: 1px solid black; width:200px">{!price.price}</td>
+            </tr>
+            
+            <apex:outputpanel rendered="{!MOD(num, 30) == 0}">
+                <div style="page-break-after: always;">&nbsp; </div>
+                <tr style="border: 1px solid black; width:500px"><th style="border: 1px solid black">Símbolo</th><th style="border: 1px solid black">Preço</th></tr>
+            </apex:outputpanel>
+
+            <apex:variable value="{!num+1}" var="num" />
+        </apex:repeat>
+    </table>
+    
+    
+    
+</apex:page>

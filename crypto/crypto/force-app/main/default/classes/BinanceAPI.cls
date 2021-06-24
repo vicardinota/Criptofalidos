@@ -38,8 +38,8 @@ public class BinanceAPI {
     }
 
     public Class SymbolPrice{
-        public String symbol;
-        public String price;
+        public String symbol {get; set;}
+        public String price {get; set;}
     }
 
     @AuraEnabled
